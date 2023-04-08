@@ -1,3 +1,4 @@
 /node_modules
 .env
 tgbotgoogle.json
+.DS_Store
