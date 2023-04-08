@@ -5,7 +5,7 @@ import fs from 'fs';
 import axios from 'axios';
 import LRUCache from 'lru-cache';
 
-const cache = new LRUCache({ ttl: 100 * 60 * 5 });
+const cache = new LRUCache({ ttl: 100 * 60 * 5, max: 100 });
 const config = new Config();
 
 const token = config.get('BOT_TOKEN');
