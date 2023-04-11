@@ -108,7 +108,7 @@ function getDatesMsg(rows) {
 
 function getProductsMsg(rows) {
   return rows
-  .map(row => `${row.name} - цена ${row.price} руб.`)
+  .map(row => `${row.description || row.name} - цена ${row.price} руб.`)
   .join('\n');
 }
 
