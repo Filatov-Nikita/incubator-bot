@@ -50,7 +50,7 @@ async function onProducts(ctx) {
     const catInd = cats.findIndex(cat => cat.name === 'Птица');
     if(catInd === -1) return;
 
-    const { data: products } = await axios.get(`${appHost}/${productsUri}`, {
+    const { data: { data: products } } = await axios.get(`${appHost}/${productsUri}`, {
       headers: { token: appToken },
       params: {
         categoryId: cats[catInd].id,
