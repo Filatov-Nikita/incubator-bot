@@ -107,6 +107,8 @@ function getDatesMsg(rows) {
 }
 
 function getProductsMsg(rows) {
+  if(rows.length === 0) return 'Нет птицы в наличии';
+
   return rows
   .map(row => `${row.description || row.name} - цена ${row.price} руб.`)
   .join('\n');
